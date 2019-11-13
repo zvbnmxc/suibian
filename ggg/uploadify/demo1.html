@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="jquery.js"></script>
+    <script src="jquery.uploadify.js"></script>
+    <link rel="stylesheet" href="uploadify.css">
+</head>
+<body>
+    <!-- <center> -->
+        <input type="file" id="uploadify">
+    <!-- </center> -->
+</body>
+</html>
+<script>
+$(document).ready(function(){
+    
+    $("#uploadify").uploadify({
+        'swf':'uploadify.swf',
+        //'swf':'wploadify.swf',
+        'uploader':'aa.php',
+        'onUploadSuccess':function(file,data,msg){
+            console.log(file);
+            console.log(data);
+            console.log(msg);
+        }
+    });
+});
+</script>
